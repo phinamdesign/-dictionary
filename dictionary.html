@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển đơn giản</title>
+</head>
+<body>
+<form action="">
+    <input type="text" value="" id="input">
+    <button type="button" onclick="check()">Tra cứu</button>
+</form>
+<script>
+function check() {
+    var arr1 =["math", "physical", "chemistry"];
+    var arr2 =["Toán", "Lý", "Hóa"];
+    var input = document.getElementById("input").value;
+    var n = arr1.length;
+    var index = -1;
+    for (i=0; i<n;i++ ){
+        if (input==arr1[i]){
+            index = i;
+            break;
+        }
+    }
+    if (index==-1){
+        alert(input+" Không tồn tại");
+    }else {
+        alert("Kết quả là : "+arr2[index]);
+    }
+}
+</script>
+</body>
+</html>
